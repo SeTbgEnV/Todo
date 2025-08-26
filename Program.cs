@@ -29,12 +29,18 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddRateLimiter();
 builder.Services.AddControllers();
 builder.Services.AddCors();
 
 var app = builder.Build();
 
-app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.UseCors(x => x.WithOrigins("http://127.0.0.1:5500", "http://localhost:5500")
+.AllowAnyMethod()
+.AllowAnyHeader()
+);
+
+app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
 
