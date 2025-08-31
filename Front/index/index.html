@@ -1,0 +1,27 @@
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoApp</title>
+</head>
+<body>
+    <h1>ToDo</h1>
+
+    <div id="auth">
+
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username">
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="todo-app" style="display:none;">
+        <h2>Your Todos</h2>
+        <input type="text" id="new-task" placeholder="New task">
+        <button onclick="addTodo()">Add Todo</button>
+        <ul id="todo-list"></ul>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TodoApp</title>
+  </head>
+  <body>
+    <h1>ToDo</h1>
+
+    <div id="todo-app">
+      <button onclick="logout()">Logout</button>
+      <h2>Your Todos</h2>
+      <input
+        type="text"
+        id="new-task"
+        placeholder="New task" />
+      <button onclick="addTask()">Add Task</button>
+      <ul id="todolist"></ul>
+      <hr />
+      <h2>Add User</h2>
+      <form id="adduser-form" onsubmit="addUser(event)">
+        <input
+          type="text"
+          id="new-username"
+          placeholder="Username"
+          required />
+        <input
+          type="password"
+          id="new-password"
+          placeholder="Password"
+          required />
+          <input type="text" id="new-role" placeholder="Role">
+        <button type="submit">Add User</button>
+      </form>
+    </div>
+
+    <script src="/Front/ToDo/ToDo.js"></script>
+  </body>
+</html>
